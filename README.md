@@ -317,27 +317,7 @@ the same table name in different schemas can be freshed independently.
 
 ## Command reference
 
-```
-migrate:fresh-table {table?}
-
-Arguments:
-  table                  The table to fresh.
-
-Options:
-  --tables=              Comma-separated, ordered list of tables (parents first).
-  --with-related         Also fresh every table that references the target (cascade).
-  --data-only            Delete rows instead of dropping/recreating (keep schema).
-  --strategy=            Resolution strategy (migration|schema|custom).
-  --connection=          The database connection to operate on.
-  --database=            Alias for --connection.
-  --all-connections      Iterate every configured connection / tenant.
-  --schema=              PostgreSQL schema (search_path) to operate within.
-  --seed                 Re-seed after recreating.
-  --seeder=              The seeder class to run.
-  --force                Skip all prompts; required to run non-interactively in a protected env.
-  --dry-run              Print the impact report and plan, then stop.
-  --pretend              Print the SQL that would run, without executing.
-```
+![migrate:fresh-table command reference: arguments and options](art/MigrateFreshTableCommand.png)
 
 ---
 

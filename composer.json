@@ -1,0 +1,71 @@
+{
+    "name": "kerroldj/laravel-migrate-fresh-table",
+    "description": "Fresh-migrate a specific table (or a chosen set of tables) in Laravel — like migrate:fresh, but scoped, foreign-key aware, multi-connection and multitenant-friendly.",
+    "keywords": [
+        "laravel",
+        "migration",
+        "migrate",
+        "fresh",
+        "table",
+        "database",
+        "multitenancy",
+        "foreign-keys",
+        "artisan"
+    ],
+    "homepage": "https://github.com/kerroldj/laravel-migrate-fresh-table",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kerrold J.",
+            "email": "erroldjayb@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/container": "^12.0|^13.0",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/database": "^12.0|^13.0",
+        "illuminate/filesystem": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.5",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kerroldj\\MigrateFreshTable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kerroldj\\MigrateFreshTable\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test-coverage": "pest --coverage",
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "format": "pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kerroldj\\MigrateFreshTable\\MigrateFreshTableServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

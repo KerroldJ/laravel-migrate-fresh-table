@@ -29,6 +29,11 @@ tenant — without nuking everything else. This package does exactly that, safel
 Works across **MySQL/MariaDB, PostgreSQL, SQLite and SQL Server** on **Laravel 12+**
 and **PHP 8.2+**.
 
+> Example — a `--with-related --data-only --dry-run` preview showing the
+> foreign-key impact report and the resolved plan before anything is touched:
+
+![migrate:fresh-table dry-run showing the foreign-key impact report and plan](art/freshExample.png)
+
 ---
 
 ## Installation

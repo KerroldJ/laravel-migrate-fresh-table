@@ -1,8 +1,12 @@
 # Laravel Migrate Fresh Table
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/kerroldj/laravel-migrate-fresh-table.svg?logo=packagist&logoColor=white)](https://packagist.org/packages/kerroldj/laravel-migrate-fresh-table)
+[![Total Downloads](https://img.shields.io/packagist/dt/kerroldj/laravel-migrate-fresh-table.svg?logo=packagist&logoColor=white&color=blue)](https://packagist.org/packages/kerroldj/laravel-migrate-fresh-table)
+[![PHP Version](https://img.shields.io/packagist/php-v/kerroldj/laravel-migrate-fresh-table.svg?logo=php&logoColor=white&color=8892BF)](https://packagist.org/packages/kerroldj/laravel-migrate-fresh-table)
+[![Laravel](https://img.shields.io/badge/laravel-%5E12.0%20%7C%20%5E13.0-FF2D20.svg?logo=laravel&logoColor=white)](https://laravel.com)
+[![License](https://img.shields.io/packagist/l/kerroldj/laravel-migrate-fresh-table.svg?color=success)](LICENSE)
 
-> `migrate:fresh`, but scoped to **one table** (or a chosen, ordered set) instead of wiping the whole database.
+> `migrate:fresh-table`, but scoped to **one table** (or a chosen, ordered set) instead of wiping the whole database.
 
 Sometimes you need to rebuild a single table from scratch — reset a corrupted
 pivot, reapply a changed schema during development, or re-provision one table per

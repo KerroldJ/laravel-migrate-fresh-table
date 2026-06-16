@@ -102,29 +102,7 @@ recreated parents-first. (With `--tables=a,b,c` you supply the order yourself �
 
 ### The foreign-key impact report & prompt
 
-```
-  Foreign-key impact report
-  Rows = dependent rows that reference the target via this FK (not null) — what a fresh would orphan.
-  users
-    references (re-created, not modified): countries, roles
-+----------------+-------------------------------+------+
-| Related table  | Relationship                  | Rows |
-+----------------+-------------------------------+------+
-| comments       | comments.user_id -> users.id  | 12   |
-| posts          | posts.user_id -> users.id     | 134  |
-+----------------+-------------------------------+------+
-
-  Plan
-    connection: mysql
-    drop order:    users
-    recreate order: users
-      users: strategy migration → 2014_10_12_000000_create_users_table.php
-
- The above tables are affected by foreign keys. What would you like to do?
-  [0] Fresh only users
-  [1] Fresh users and all tables that reference it
-  [2] Cancel
-```
+![Foreign-key impact report with the resolved plan and the interactive prompt](art/Foreign-keyImpactReport.png)
 
 - The table lists every **dependent** that references the target, A–Z, with the
   **number of rows that actually point at it** (FK not null) — the rows a fresh
